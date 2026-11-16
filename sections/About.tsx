@@ -17,8 +17,8 @@ export function About({ preview = false, showHeading = true }: AboutProps) {
         <ScrollReveal>
           <div className="relative overflow-hidden rounded-[1.75rem] border border-[#1A1F24]/08 bg-[#E8E4DB] shadow-[0_24px_60px_rgba(18,21,26,0.08)]">
             <Image
-              src="/images/about-pharmacy.svg"
-              alt="Healthcare and pharmacy care environment placeholder"
+              src="/images/about-pharmacy.jpg"
+              alt="Pharmacy care and wellness products arranged with care"
               width={900}
               height={700}
               className="h-auto w-full object-cover"

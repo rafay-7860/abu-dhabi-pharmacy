@@ -40,6 +40,8 @@ export function Header() {
     return pathname === href || pathname.startsWith(`${href}/`);
   };
 
+  const onDarkHero = !scrolled && !open;
+
   return (
     <motion.header
       initial={reduceMotion ? false : { y: -24, opacity: 0 }}
@@ -47,13 +49,13 @@ export function Header() {
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        scrolled
+        scrolled || open
           ? "border-b border-[#1A1F24]/10 bg-[#F7F4EE]/92 shadow-[0_8px_30px_rgba(18,21,26,0.08)] backdrop-blur-xl"
           : "bg-transparent",
       )}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <Logo />
+        <Logo tone={onDarkHero ? "light" : "dark"} />
 
         <nav className="hidden items-center gap-1 xl:flex" aria-label="Primary">
           {navLinks.map((link) => (
@@ -63,8 +65,12 @@ export function Header() {
               className={cn(
                 "rounded-lg px-3 py-2 text-sm font-medium transition-colors",
                 isActive(link.href)
-                  ? "bg-[#1A1F24] text-[#E8D5A3]"
-                  : "text-[#2A2E32]/80 hover:bg-[#E8E4DB] hover:text-[#1A1F24]",
+                  ? onDarkHero
+                    ? "bg-[#C4A35A]/20 text-[#E8D5A3]"
+                    : "bg-[#1A1F24] text-[#E8D5A3]"
+                  : onDarkHero
+                    ? "text-[#F7F4EE]/85 hover:bg-white/10 hover:text-white"
+                    : "text-[#2A2E32]/80 hover:bg-[#E8E4DB] hover:text-[#1A1F24]",
               )}
             >
               {link.label}
@@ -83,7 +89,12 @@ export function Header() {
           </Button>
           <button
             type="button"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[#1A1F24]/15 bg-[#FFFEFB] text-[#1A1F24] xl:hidden"
+            className={cn(
+              "inline-flex h-11 w-11 items-center justify-center rounded-xl xl:hidden",
+              onDarkHero
+                ? "border border-white/25 bg-white/10 text-[#F7F4EE]"
+                : "border border-[#1A1F24]/15 bg-[#FFFEFB] text-[#1A1F24]",
+            )}
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label={open ? "Close menu" : "Open menu"}

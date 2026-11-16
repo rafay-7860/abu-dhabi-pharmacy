@@ -54,13 +54,13 @@ export const categories = [
     id: "personal-care",
     title: "Personal Care",
     description: "Personal care essentials and product information support.",
-    image: "/images/category-personal-care.svg",
+    image: "/images/category-personal-care.jpg",
   },
   {
     id: "vitamins-supplements",
     title: "Vitamins and Supplements",
     description: "Demo category for vitamins and supplement product inquiries.",
-    image: "/images/category-vitamins.svg",
+    image: "/images/category-vitamins.jpg",
   },
   {
     id: "skin-care",
