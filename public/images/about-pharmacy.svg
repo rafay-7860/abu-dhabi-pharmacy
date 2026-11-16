@@ -1,0 +1,14 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700" role="img" aria-label="Care and Trust">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8F7F0"/>
+      <stop offset="100%" stop-color="#D5F0E4"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="700" fill="url(#g)"/>
+  <rect x="90" y="110" width="720" height="480" rx="40" fill="#FFFFFF" opacity="0.75" stroke="#15966A" stroke-opacity="0.2"/>
+  <circle cx="450" cy="300" r="54" fill="#15966A" opacity="0.9"/>
+  <path d="M450 272v56M422 300h56" stroke="#E8F7F0" stroke-width="10" stroke-linecap="round"/>
+  <text x="50%" y="420" text-anchor="middle" font-family="Georgia, serif" font-size="32" fill="#24332E">Care &amp; Trust</text>
+  <text x="50%" y="465" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="16" fill="#086B4C">Healthcare Environment Placeholder</text>
+</svg>

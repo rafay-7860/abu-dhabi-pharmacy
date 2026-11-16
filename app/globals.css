@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #15966a;
+  --primary-dark: #086b4c;
+  --mint: #e8f7f0;
+  --white: #ffffff;
+  --light-grey: #f5f8f7;
+  --text: #24332e;
+  --background: var(--white);
+  --foreground: var(--text);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-mint: var(--mint);
+  --color-light-grey: var(--light-grey);
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-fraunces);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-manrope), "Segoe UI", sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-fraunces), Georgia, serif;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--primary) 28%, white);
+  color: var(--primary-dark);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
