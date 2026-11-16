@@ -7,8 +7,8 @@ type LogoProps = {
 };
 
 export function Logo({ className, tone = "dark" }: LogoProps) {
-  const text = tone === "light" ? "text-white" : "text-[#24332E]";
-  const accent = tone === "light" ? "text-[#A8E6CF]" : "text-[#15966A]";
+  const text = tone === "light" ? "text-white" : "text-[#1A1F24]";
+  const accent = tone === "light" ? "text-[#E8D5A3]" : "text-[#C4A35A]";
 
   return (
     <Link
@@ -17,7 +17,7 @@ export function Logo({ className, tone = "dark" }: LogoProps) {
       aria-label="Abu Dhabi Pharmacy home"
     >
       <span
-        className="relative flex h-11 w-11 items-center justify-center rounded-2xl bg-[linear-gradient(145deg,#15966A,#086B4C)] text-white shadow-[0_8px_20px_rgba(21,150,106,0.28)]"
+        className="relative flex h-11 w-11 items-center justify-center rounded-xl bg-[linear-gradient(145deg,#C4A35A,#8B7340)] text-[#12151A] shadow-[0_8px_20px_rgba(196,163,90,0.28)]"
         aria-hidden
       >
         <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none">
@@ -26,17 +26,17 @@ export function Logo({ className, tone = "dark" }: LogoProps) {
             fill="currentColor"
             opacity="0.95"
           />
-          <path d="M10.2 10.2h3.6v3.6h-3.6v-3.6z" fill="#E8F7F0" />
+          <path d="M10.2 10.2h3.6v3.6h-3.6v-3.6z" fill="#F7F4EE" />
         </svg>
       </span>
       <span className="leading-tight">
-        <span className={cn("block font-display text-lg font-semibold tracking-tight", text)}>
+        <span className={cn("block font-display text-xl font-semibold tracking-tight", text)}>
           Abu Dhabi <span className={accent}>Pharmacy</span>
         </span>
         <span
           className={cn(
-            "block text-[11px] font-medium uppercase tracking-[0.18em]",
-            tone === "light" ? "text-white/70" : "text-[#086B4C]/70",
+            "block text-[11px] font-medium uppercase tracking-[0.2em]",
+            tone === "light" ? "text-white/65" : "text-[#8B7340]",
           )}
         >
           Healthcare · Abu Dhabi

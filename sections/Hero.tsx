@@ -17,13 +17,21 @@ export function Hero() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section className="relative overflow-hidden bg-[linear-gradient(145deg,#E8F7F0_0%,#FFFFFF_42%,#F5F8F7_100%)] pb-16 pt-28 sm:pb-24 sm:pt-32">
+    <section className="relative overflow-hidden bg-[linear-gradient(145deg,#F7F4EE_0%,#E8E4DB_42%,#F7F4EE_100%)] pb-16 pt-28 sm:pb-24 sm:pt-32">
       <div
-        className="pointer-events-none absolute -left-24 top-24 h-72 w-72 rounded-full bg-[#15966A]/15 blur-3xl"
+        className="pointer-events-none absolute inset-0 opacity-[0.35]"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 20% 20%, rgba(196,163,90,0.18), transparent 40%), radial-gradient(circle at 80% 10%, rgba(26,31,36,0.08), transparent 35%)",
+        }}
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute -right-16 bottom-0 h-80 w-80 rounded-[40%] bg-[#086B4C]/10 blur-3xl"
+        className="pointer-events-none absolute -left-24 top-24 h-72 w-72 rounded-full bg-[#C4A35A]/15 blur-3xl"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute -right-16 bottom-0 h-80 w-80 rounded-[40%] bg-[#1A1F24]/10 blur-3xl"
         aria-hidden
       />
 
@@ -31,7 +39,7 @@ export function Hero() {
         floatIcons.map(({ Icon, className }, index) => (
           <motion.div
             key={index}
-            className={`pointer-events-none absolute hidden text-[#15966A]/35 lg:block ${className}`}
+            className={`pointer-events-none absolute hidden text-[#C4A35A]/40 lg:block ${className}`}
             animate={{ y: [0, -12, 0] }}
             transition={{ duration: 4 + index, repeat: Infinity, ease: "easeInOut" }}
             aria-hidden
@@ -45,7 +53,7 @@ export function Hero() {
           <motion.p
             initial={reduceMotion ? false : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-xs font-semibold uppercase tracking-[0.24em] text-[#15966A]"
+            className="text-xs font-semibold uppercase tracking-[0.28em] text-[#8B7340]"
           >
             Your Health, Our Priority
           </motion.p>
@@ -53,7 +61,7 @@ export function Hero() {
             initial={reduceMotion ? false : { opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.08 }}
-            className="mt-4 font-display text-4xl font-semibold leading-[1.08] tracking-tight text-[#24332E] sm:text-5xl lg:text-6xl"
+            className="mt-4 font-display text-4xl font-semibold leading-[1.05] tracking-tight text-[#1A1F24] sm:text-5xl lg:text-6xl"
           >
             Your Healthcare Destination in Abu Dhabi
           </motion.h1>
@@ -61,7 +69,7 @@ export function Hero() {
             initial={reduceMotion ? false : { opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.16 }}
-            className="mt-5 max-w-xl text-base leading-relaxed text-[#24332E]/75 sm:text-lg"
+            className="mt-5 max-w-xl text-base leading-relaxed text-[#2A2E32]/75 sm:text-lg"
           >
             Welcome to Abu Dhabi Pharmacy. Contact our team for pharmacy information,
             healthcare product inquiries, and assistance.
@@ -86,8 +94,8 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           className="relative"
         >
-          <div className="absolute -inset-4 rounded-[2rem] bg-[linear-gradient(135deg,#15966A33,#086B4C22)] blur-xl" aria-hidden />
-          <div className="relative overflow-hidden rounded-[2rem] border border-white/70 shadow-[0_30px_80px_rgba(8,107,76,0.18)]">
+          <div className="absolute -inset-4 rounded-[1.75rem] bg-[linear-gradient(135deg,#C4A35A44,#1A1F2422)] blur-xl" aria-hidden />
+          <div className="relative overflow-hidden rounded-[1.75rem] border border-[#C4A35A]/25 shadow-[0_30px_80px_rgba(18,21,26,0.18)]">
             <Image
               src="/images/hero-pharmacy.svg"
               alt="Professional pharmacy interior placeholder for Abu Dhabi Pharmacy"
@@ -98,13 +106,13 @@ export function Hero() {
             />
           </div>
           <div
-            className="absolute -bottom-5 -left-3 hidden rounded-3xl bg-white px-4 py-3 shadow-[0_16px_40px_rgba(36,51,46,0.12)] sm:block"
+            className="absolute -bottom-5 -left-3 hidden rounded-2xl border border-[#C4A35A]/25 bg-[#FFFEFB] px-4 py-3 shadow-[0_16px_40px_rgba(18,21,26,0.12)] sm:block"
             aria-hidden
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#15966A]">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8B7340]">
               Najdah Street
             </p>
-            <p className="text-sm font-medium text-[#24332E]">Al Danah, Abu Dhabi</p>
+            <p className="text-sm font-medium text-[#1A1F24]">Al Danah, Abu Dhabi</p>
           </div>
         </motion.div>
       </div>

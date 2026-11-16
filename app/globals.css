@@ -1,25 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  --primary: #15966a;
-  --primary-dark: #086b4c;
-  --mint: #e8f7f0;
-  --white: #ffffff;
-  --light-grey: #f5f8f7;
-  --text: #24332e;
-  --background: var(--white);
+  --charcoal: #1a1f24;
+  --gold: #c4a35a;
+  --gold-deep: #8b7340;
+  --ivory: #f7f4ee;
+  --stone: #e8e4db;
+  --text: #2a2e32;
+  --footer: #12151a;
+  --gold-soft: #e8d5a3;
+  --background: var(--ivory);
   --foreground: var(--text);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
-  --color-primary-dark: var(--primary-dark);
-  --color-mint: var(--mint);
-  --color-light-grey: var(--light-grey);
-  --font-sans: var(--font-manrope);
-  --font-display: var(--font-fraunces);
+  --color-charcoal: var(--charcoal);
+  --color-gold: var(--gold);
+  --color-gold-deep: var(--gold-deep);
+  --color-ivory: var(--ivory);
+  --color-stone: var(--stone);
+  --color-footer: var(--footer);
+  --font-sans: var(--font-outfit);
+  --font-display: var(--font-cormorant);
 }
 
 html {
@@ -29,16 +33,17 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-manrope), "Segoe UI", sans-serif;
+  font-family: var(--font-outfit), "Segoe UI", sans-serif;
 }
 
 .font-display {
-  font-family: var(--font-fraunces), Georgia, serif;
+  font-family: var(--font-cormorant), Georgia, serif;
+  letter-spacing: -0.02em;
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--primary) 28%, white);
-  color: var(--primary-dark);
+  background: color-mix(in srgb, var(--gold) 35%, white);
+  color: var(--charcoal);
 }
 
 @media (prefers-reduced-motion: reduce) {

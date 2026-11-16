@@ -89,7 +89,7 @@ export function ContactForm() {
   }
 
   const fieldClass =
-    "w-full rounded-2xl border border-[#15966A]/20 bg-white px-4 py-3 text-sm text-[#24332E] outline-none transition focus:border-[#15966A] focus:ring-2 focus:ring-[#15966A]/20";
+    "w-full rounded-xl border border-[#1A1F24]/15 bg-[#FFFEFB] px-4 py-3 text-sm text-[#2A2E32] outline-none transition focus:border-[#C4A35A] focus:ring-2 focus:ring-[#C4A35A]/25";
 
   return (
     <motion.form
@@ -98,10 +98,10 @@ export function ContactForm() {
       initial={reduceMotion ? false : { opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="rounded-3xl border border-[#15966A]/10 bg-white p-6 shadow-[0_16px_50px_rgba(36,51,46,0.08)] sm:p-8"
+      className="rounded-2xl border border-[#1A1F24]/08 bg-[#FFFEFB] p-6 shadow-[0_16px_50px_rgba(18,21,26,0.07)] sm:p-8"
     >
       <div className="grid gap-4 sm:grid-cols-2">
-        <label className="block text-sm font-medium text-[#24332E]">
+        <label className="block text-sm font-medium text-[#1A1F24]">
           Full Name *
           <input
             className={`${fieldClass} mt-2`}
@@ -112,7 +112,7 @@ export function ContactForm() {
             required
           />
         </label>
-        <label className="block text-sm font-medium text-[#24332E]">
+        <label className="block text-sm font-medium text-[#1A1F24]">
           Phone Number *
           <input
             className={`${fieldClass} mt-2`}
@@ -124,7 +124,7 @@ export function ContactForm() {
             required
           />
         </label>
-        <label className="block text-sm font-medium text-[#24332E]">
+        <label className="block text-sm font-medium text-[#1A1F24]">
           Email (optional)
           <input
             className={`${fieldClass} mt-2`}
@@ -135,7 +135,7 @@ export function ContactForm() {
             onChange={(e) => setValues((v) => ({ ...v, email: e.target.value }))}
           />
         </label>
-        <label className="block text-sm font-medium text-[#24332E]">
+        <label className="block text-sm font-medium text-[#1A1F24]">
           Inquiry Type *
           <select
             className={`${fieldClass} mt-2`}
@@ -152,7 +152,7 @@ export function ContactForm() {
           </select>
         </label>
       </div>
-      <label className="mt-4 block text-sm font-medium text-[#24332E]">
+      <label className="mt-4 block text-sm font-medium text-[#1A1F24]">
         Message *
         <textarea
           className={`${fieldClass} mt-2 min-h-32 resize-y`}
@@ -164,13 +164,13 @@ export function ContactForm() {
       </label>
 
       {status.type === "error" && (
-        <p className="mt-4 rounded-2xl bg-red-50 px-4 py-3 text-sm text-red-700" role="alert">
+        <p className="mt-4 rounded-xl bg-red-50 px-4 py-3 text-sm text-red-700" role="alert">
           {status.message}
         </p>
       )}
       {status.type === "success" && (
         <p
-          className="mt-4 rounded-2xl bg-[#E8F7F0] px-4 py-3 text-sm text-[#086B4C]"
+          className="mt-4 rounded-xl bg-[#E8E4DB] px-4 py-3 text-sm text-[#1A1F24]"
           role="status"
         >
           {status.message}

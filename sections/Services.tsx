@@ -12,16 +12,16 @@ export function Services({ limit, showCta = false }: ServicesProps) {
   const items = typeof limit === "number" ? services.slice(0, limit) : services;
 
   return (
-    <section id="services" className="bg-[#F5F8F7] py-20 sm:py-24">
+    <section id="services" className="bg-[#E8E4DB] py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <AnimateIn className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#15966A]">
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8B7340]">
             Pharmacy Services
           </p>
-          <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-[#24332E] sm:text-4xl">
+          <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-[#1A1F24] sm:text-4xl">
             Support for Everyday Healthcare Needs
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-[#24332E]/75">
+          <p className="mt-4 text-base leading-relaxed text-[#2A2E32]/75">
             Suggested service categories for website visitors. Availability may vary —
             contact the pharmacy to confirm what you need.
           </p>

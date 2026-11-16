@@ -8,16 +8,16 @@ export function WhyChooseUs() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section id="why-choose-us" className="bg-[#F5F8F7] py-20 sm:py-24">
+    <section id="why-choose-us" className="bg-[#E8E4DB] py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#15966A]">
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8B7340]">
             Why Choose Us
           </p>
-          <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-[#24332E] sm:text-4xl">
+          <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-[#1A1F24] sm:text-4xl">
             Your Local Pharmacy in Abu Dhabi
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-[#24332E]/75">
+          <p className="mt-4 text-base leading-relaxed text-[#2A2E32]/75">
             Simple reasons visitors choose Abu Dhabi Pharmacy for pharmacy information
             and local healthcare product inquiries.
           </p>
@@ -34,15 +34,15 @@ export function WhyChooseUs() {
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.45, delay: index * 0.05 }}
                 whileHover={reduceMotion ? undefined : { y: -4 }}
-                className="rounded-3xl border border-[#15966A]/10 bg-white p-6 shadow-[0_12px_36px_rgba(36,51,46,0.06)]"
+                className="rounded-2xl border border-[#1A1F24]/08 bg-[#FFFEFB] p-6 shadow-[0_12px_36px_rgba(18,21,26,0.05)]"
               >
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#E8F7F0] text-[#086B4C]">
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#1A1F24] text-[#E8D5A3]">
                   <Icon className="h-5 w-5" aria-hidden />
                 </div>
-                <h3 className="font-display text-xl font-semibold text-[#24332E]">
+                <h3 className="font-display text-2xl font-semibold text-[#1A1F24]">
                   {item.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-[#24332E]/75">
+                <p className="mt-3 text-sm leading-relaxed text-[#2A2E32]/75">
                   {item.description}
                 </p>
               </motion.article>

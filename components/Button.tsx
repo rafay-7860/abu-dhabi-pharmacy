@@ -26,19 +26,19 @@ type ButtonAsLink = CommonProps & {
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-[linear-gradient(135deg,#15966A_0%,#086B4C_100%)] text-white shadow-[0_10px_30px_rgba(21,150,106,0.28)] hover:shadow-[0_14px_34px_rgba(8,107,76,0.35)]",
+    "bg-[linear-gradient(135deg,#C4A35A_0%,#8B7340_100%)] text-[#12151A] shadow-[0_10px_28px_rgba(196,163,90,0.28)] hover:shadow-[0_14px_32px_rgba(139,115,64,0.35)]",
   secondary:
-    "bg-white text-[#086B4C] border border-[#15966A]/25 hover:bg-[#E8F7F0]",
+    "bg-[#FFFEFB] text-[#1A1F24] border border-[#C4A35A]/35 hover:bg-[#E8E4DB]",
   outline:
-    "bg-transparent text-[#086B4C] border border-[#15966A]/40 hover:bg-[#E8F7F0]",
-  ghost: "bg-transparent text-[#086B4C] hover:bg-[#E8F7F0]",
+    "bg-transparent text-[#1A1F24] border border-[#1A1F24]/25 hover:border-[#C4A35A] hover:bg-[#E8E4DB]/60",
+  ghost: "bg-transparent text-[#1A1F24] hover:bg-[#E8E4DB]",
 };
 
 export function Button(props: ButtonAsButton | ButtonAsLink) {
   const reduceMotion = useReducedMotion();
   const { children, className, variant = "primary" } = props;
   const classes = cn(
-    "inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 text-sm font-semibold tracking-wide transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#15966A] focus-visible:ring-offset-2 disabled:opacity-60",
+    "inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold tracking-wide transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C4A35A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F7F4EE] disabled:opacity-60",
     variants[variant],
     className,
   );

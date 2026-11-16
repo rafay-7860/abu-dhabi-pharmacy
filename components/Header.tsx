@@ -48,7 +48,7 @@ export function Header() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
         scrolled
-          ? "border-b border-[#15966A]/10 bg-white/90 shadow-[0_8px_30px_rgba(36,51,46,0.08)] backdrop-blur-xl"
+          ? "border-b border-[#1A1F24]/10 bg-[#F7F4EE]/92 shadow-[0_8px_30px_rgba(18,21,26,0.08)] backdrop-blur-xl"
           : "bg-transparent",
       )}
     >
@@ -61,10 +61,10 @@ export function Header() {
               key={link.href}
               href={link.href}
               className={cn(
-                "rounded-xl px-3 py-2 text-sm font-medium transition-colors",
+                "rounded-lg px-3 py-2 text-sm font-medium transition-colors",
                 isActive(link.href)
-                  ? "bg-[#E8F7F0] text-[#086B4C]"
-                  : "text-[#24332E]/80 hover:bg-[#E8F7F0]/70 hover:text-[#086B4C]",
+                  ? "bg-[#1A1F24] text-[#E8D5A3]"
+                  : "text-[#2A2E32]/80 hover:bg-[#E8E4DB] hover:text-[#1A1F24]",
               )}
             >
               {link.label}
@@ -83,7 +83,7 @@ export function Header() {
           </Button>
           <button
             type="button"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-[#15966A]/20 bg-white text-[#086B4C] xl:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[#1A1F24]/15 bg-[#FFFEFB] text-[#1A1F24] xl:hidden"
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label={open ? "Close menu" : "Open menu"}
@@ -101,7 +101,7 @@ export function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="border-t border-[#15966A]/10 bg-white xl:hidden"
+            className="border-t border-[#1A1F24]/10 bg-[#F7F4EE] xl:hidden"
           >
             <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4 sm:px-6" aria-label="Mobile">
               {navLinks.map((link, index) => (
@@ -114,10 +114,10 @@ export function Header() {
                   <Link
                     href={link.href}
                     className={cn(
-                      "block rounded-2xl px-4 py-3 text-base font-medium",
+                      "block rounded-xl px-4 py-3 text-base font-medium",
                       isActive(link.href)
-                        ? "bg-[#E8F7F0] text-[#086B4C]"
-                        : "text-[#24332E] hover:bg-[#F5F8F7]",
+                        ? "bg-[#1A1F24] text-[#E8D5A3]"
+                        : "text-[#2A2E32] hover:bg-[#E8E4DB]",
                     )}
                     onClick={() => setOpen(false)}
                   >
